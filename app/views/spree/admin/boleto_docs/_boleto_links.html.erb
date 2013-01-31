@@ -1,0 +1,12 @@
+<td>
+	<p>
+		individual =>
+		impressao: <%= clippy order_boleto_doc_url(boleto_doc.order.number, boleto_doc, :auth_token => boleto_doc.order.user.authentication_token) %>
+		pdf: <%= clippy order_boleto_doc_url(boleto_doc.order.number, boleto_doc, :auth_token => boleto_doc.order.user.authentication_token, :format => :pdf) %>
+	</p>
+	<p>
+		pendentes =>
+		impressao: <%= clippy order_boleto_docs_url(boleto_doc.order.number, :auth_token => boleto_doc.order.user.authentication_token) %>
+		pdf: <%= clippy order_boleto_docs_url(boleto_doc.order.number, :auth_token => boleto_doc.order.user.authentication_token, :format => :pdf) %>
+	</p>
+</td>
